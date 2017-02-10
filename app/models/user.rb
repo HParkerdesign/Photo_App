@@ -11,5 +11,8 @@ class User < ApplicationRecord
   validates :username, presence: true, uniqueness: true, length: {minimum: 15}
   validates :name, presence: true
 
+  acts_as_followable
+  acts_as_follower
+
 
 end

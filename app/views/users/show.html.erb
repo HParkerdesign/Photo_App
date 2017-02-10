@@ -5,6 +5,8 @@
     <div class="card card-block">
       <h4 class="card-title"><%= @user.username %></h4>
       <p class="card-text"><%= @user.name %></p>
+        <p class="card-text"><%= link_to "Unfollow", unfollow_user_path(@user.username), method: :delete %></p>
+        <p class="card-text"><%= link_to "Follow", follow_user_path(@user.username), method: :post %></p>
       </div>
     </div>
   <div class="col-md-8">

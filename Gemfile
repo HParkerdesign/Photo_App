@@ -20,6 +20,9 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'devise'
 gem 'activeadmin', '~> 1.0.0.pre4'
 gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'
+gem 'acts_as_follower', github: 'tcocca/acts_as_follower', branch: 'master'
+
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
