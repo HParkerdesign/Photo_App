@@ -1,4 +1,4 @@
-class Follows < ApplicationRecord
+class Follow < ApplicationRecord
 
   extend ActsAsFollower::FollowerLib
   extend ActsAsFollower::FollowScopes
