@@ -6,7 +6,7 @@
         <h4 class="card-title">Your Account</h4>
         <p class="card-text"><%= link_to current_user.username, user_path(current_user.username) %></p>
       <% else %>
-         <p class="card-text"><%= link_to "Sign up now!", signin_path %></p>
+         <h4 class="card-text"><%= link_to 'Sign up now!', signin_path %></h4>
 
       <% end %>
         </div>
@@ -19,6 +19,10 @@
     <% @tweets.each do |tweet| %>
     <%= link_to tweet, class: "list-group-item list-group-item-action" do %>
     <h5 class="list-group-item-heading"><%= tweet.user.username %> </h5>
+    <% if tweet.image.present? %>
+    <center><%= image_tag tweet.image %></center>
+    <% end %>
+
     <p class="list-group-item-text"><%= tweet.content %></p>
       <% if tweet.user == current_user %>
         <%= link_to 'Edit', edit_tweet_path(tweet) %>

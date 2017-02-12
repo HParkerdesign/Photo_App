@@ -28,6 +28,7 @@ ActiveAdmin.routes(self)
 
 
   resources :items
+
   resources :tweets
 
 
