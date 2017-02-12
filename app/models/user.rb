@@ -8,7 +8,7 @@ class User < ApplicationRecord
 
   has_many :items
 
-  validates :username, presence: true, uniqueness: true, length: {minimum: 15}
+  validates :username, presence: true, uniqueness: true, length: {minimum: 6}
   validates :name, presence: true
 
   acts_as_followable
