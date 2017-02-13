@@ -45,7 +45,7 @@ class TweetsController < ApplicationController
   def destroy
     @tweet = current_user.tweets.find(params[:id])
     @tweet.destroy
-    redirect_to tweets_url, notice: 'Tweet was successfully destroyed.'
+    redirect_to feed_url, notice: 'Tweet was successfully destroyed.'
   end
 
   private
